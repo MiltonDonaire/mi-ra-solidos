@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realidad Aumentada - Sólidos Geométricos</title>
-    <!-- Librerías de recursos libres de la web -->
-    <script src="https://aframe.io"></script>
-    <script src="https://githack.com"></script>
+    <!-- 1. Cargar A-Frame desde su CDN oficial con una versión específica -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <!-- 2. Cargar AR.js para A-Frame desde su repositorio oficial -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
 
@@ -17,7 +18,6 @@
         <a-marker preset="hiro">
             
             <!-- Sólido 3D: Un cubo rojo semi-transparente -->
-            <!-- Puedes cambiarlo por a-sphere (esfera) o a-cylinder (cilindro) -->
             <a-box 
                 position="0 0.5 0" 
                 material="color: #FF1493; opacity: 0.8;"
@@ -31,10 +31,9 @@
             </a-box>
 
         </a-marker>
+        
+        <!-- La cámara es implícita en AR.js, no necesitas declararla -->
 
-        <!-- Cámara requerida para renderizar la escena -->
-        
-        
     </a-scene>
 
 </body>
